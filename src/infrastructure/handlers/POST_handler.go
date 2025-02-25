@@ -23,8 +23,6 @@ func GithubWebhookHanlder(ctx *gin.Context) {
 	}
 
 	switch eventType {
-	case "ping":
-		handleGithubPingEvent(ctx)
 	case "pull_request":
 		handleGithubPullRequestEvent(ctx, payload)
 	}
